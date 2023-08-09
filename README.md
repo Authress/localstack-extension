@@ -1,6 +1,8 @@
 
 <p align="center">
-  <img src="https://authress.io/static/images/logo-text-200.png" height="100px" alt="Authress logo">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://authress.io/static/images/logo-text-200.png" height="100px" alt="Authress logo">
+  <img src="https://github.com/Authress/localstack-extension/assets/5056218/7bad113d-405f-4cd4-9335-3427d6419a13" alt="Partnership" height="80px">
+
   <img src="https://localstack.cloud/images/header-logo-new.svg" height="85px" alt="LocalStack logo">
 
 </p>
