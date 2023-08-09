@@ -1,11 +1,13 @@
 
 <p align="center">
-    <img src="https://github.com/Authress/authress-local/assets/5056218/156e3881-b359-4810-bc96-7abeaf9ddbdb" height="300px" alt="Authress Media Banner">
+  <img src="https://authress.io/static/images/logo-text-200.png" height="100px" alt="Authress logo">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://localstack.cloud/images/header-logo-new.svg" height="85px" alt="LocalStack logo">
+
 </p>
 
 # LocalStack Extension for Authress Authentication and Authorization
 
-This is the LocalStack extension that enables running authentication, user identity, permissions, api key management, and access control in your LocalStack environment via [Authress](https://authress.io).
+This is the [LocalStack](https://localstack.cloud/) extension that enables running authentication, user identity, permissions, api key management, and access control in your [LocalStack environment](https://localstack.cloud/) via [Authress](https://authress.io).
 
 This LocalStack extension generates a copy of the [Authress API](https://authress.io/app/#/api) so that the authentication and access management the Authress API provides can be utilized by running services directly in any environment. You can use this to build authentication and authorization directly into your applications and services. Additionally, this extension can be used locally to develop faster without needing an [Authress Account](https://authress.io).
 
@@ -45,6 +47,9 @@ const authressClient = new AuthressClient({ authressApiUrl: `http://authress.loc
 await authressClient.userPermissions.authorizeUser(userId, resourceUri, permission);
 ```
 
+## Knowledge Base
+
+Review the in depth guides in the [Authress Local KB](https://authress.io/knowledge-base/docs/SDKs/authress-local).
 
 ## Contribution Guide
 
