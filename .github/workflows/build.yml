@@ -32,7 +32,7 @@ jobs:
         branchId="${GITHUB_REF/refs\/heads\/release\//}"
         buildNumber="${branchId}.${GITHUB_RUN_NUMBER}"
         echo $branchId $buildNumber
-        sed "s/0.0.0/${buildNumber}/g" ./localstack_extension/VERSION -i
+        sed "s/0.0.0/${buildNumber}/g" ./localstack_extension_authress/VERSION -i
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip

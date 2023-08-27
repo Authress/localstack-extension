@@ -1,4 +1,3 @@
-import logging
 from typing import Optional
 
 from localstack.utils.container_utils.container_client import (
@@ -8,9 +7,6 @@ from localstack.utils.container_utils.container_client import (
 from localstack.utils.docker_utils import DOCKER_CLIENT
 from localstack.utils.serving import Server
 from localstack.utils.sync import poll_condition
-
-LOG = logging.getLogger(__name__)
-
 
 class ContainerServer(Server):
     client: ContainerClient

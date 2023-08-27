@@ -8,9 +8,10 @@ from localstack.extensions.api import Extension, aws, http
 from localstack.utils.container_utils.container_client import ContainerConfiguration
 from localstack.utils.strings import short_uid
 
-from localstack_extension.server import ContainerServer
+from localstack_extension_authress.server import ContainerServer
 
 LOG = logging.getLogger(__name__)
+LOG.setLevel(level=logging.INFO)
 
 
 class AuthressExtension(Extension):
@@ -29,15 +30,16 @@ class AuthressExtension(Extension):
         """
 
         if config.DEBUG:
-            level = logging.DEBUG
-        else:
-            level = logging.INFO
-        logging.getLogger("authress").setLevel(level=level)
+            LOG.setLevel(level=logging.DEBUG)
+        
+        LOG.debug("[Authress] ****************** on_extension_load ******************")
 
     def on_platform_start(self):
         """
         Called when LocalStack starts the main runtime.
         """
+        
+        LOG.debug("[Authress] ****************** on_platform_start ******************")
 
         # volumes = VolumeMappings()
         # if localstack_volume := get_default_volume_dir_mount():
@@ -84,6 +86,9 @@ class AuthressExtension(Extension):
         """
         Called when LocalStack is shutting down. Can be used to close any resources (threads, processes, sockets, etc.).
         """
+        
+        LOG.debug("[Authress] ****************** on_platform_shutdown ******************")
+
         if self.server:
             self.server.shutdown()
             self.server.client.remove_container(self.server.config.name)
@@ -113,6 +118,8 @@ class AuthressExtension(Extension):
         Called with the custom request handlers of the LocalStack gateway. Overwrite this to add or update handlers.
         :param handlers: custom request handlers of the gateway
         """
+        
+        LOG.debug("[Authress] ****************** update_request_handlers ******************")
         pass
 
     def update_response_handlers(self, handlers: aws.CompositeResponseHandler):
@@ -120,10 +127,14 @@ class AuthressExtension(Extension):
         Called with the custom response handlers of the LocalStack gateway. Overwrite this to add or update handlers.
         :param handlers: custom response handlers of the gateway
         """
+        
+        LOG.debug("[Authress] ****************** update_response_handlers ******************")
         pass
     
     def on_platform_ready(self):
         """
-        Called when LocalStack is ready and the Ready marker has been printed.
+        Called when LocalStack is ready and the Ready marker has been LOG.debuged.
         """
+        
+        LOG.debug("[Authress] ****************** on_platform_ready ******************")
         pass
