@@ -45,7 +45,7 @@ You can configure API calls to the authorization server by passing this url as t
 
 ```ts
 import { AuthressClient } from 'authress-sdk';
-const authressClient = new AuthressClient({ authressApiUrl: `http://authress.localhost.localstack.cloud:8888` });
+const authressClient = new AuthressClient({ authressApiUrl: `http://authress.localhost.localstack.cloud:4566` });
 await authressClient.userPermissions.authorizeUser(userId, resourceUri, permission);
 ```
 
