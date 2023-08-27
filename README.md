@@ -38,7 +38,7 @@ localstack extensions install localstack-extension-authress
 ```
 
 ## Usage
-The auth extension runs at `http://authress.localhost.localstack.cloud:8888`.
+The auth extension runs at `http://authress.localhost.localstack.cloud:4566`.
 
 You can configure API calls to the authorization server by passing this url as the `authressApiUrl` or the `authress_api_url` depending on which SDK you are using.
 
