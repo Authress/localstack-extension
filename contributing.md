@@ -25,8 +25,8 @@ echo '{"token":true}' > ~/.localstack/auth.json
 ```bash
 cd localstack-extensions/authress
 python -m pip install --upgrade pip
-python3 -m pip install --upgrade localstack==2.2.0
+python3 -m pip install --upgrade localstack==2.2.1.dev20230825124402
 make install
 localstack extensions dev enable .
-EXTENSION_DEV_MODE=1 localstack start
+ACTIVATE_PRO=1 LOCALSTACK_API_KEY=API_KEY EXTENSION_DEV_MODE=1 DEBUG=1 localstack start
 ```

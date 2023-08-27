@@ -3,7 +3,7 @@ from setuptools import setup
 from os import path
 
 this_directory = path.abspath(path.dirname(__file__))
-with open(path.join(this_directory, 'localstack_extension', 'VERSION')) as version_file:
+with open(path.join(this_directory, 'authress', 'VERSION')) as version_file:
   VERSION = version_file.read().strip()
 
 print("Building version", VERSION)
