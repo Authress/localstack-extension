@@ -10,9 +10,12 @@ from localstack.utils.strings import short_uid
 
 from localstack_extension_authress.server import ContainerServer
 
-LOG = logging.getLogger(__name__)
-LOG.setLevel(level=logging.INFO)
+LOG = logging.getLogger('Authress')
 
+if config.DEBUG:
+    LOG.setLevel(level=logging.DEBUG)
+else:
+    LOG.setLevel(level=logging.INFO)
 
 class AuthressExtension(Extension):
     name = "localstack-extension-authress"
@@ -29,17 +32,10 @@ class AuthressExtension(Extension):
         Called when LocalStack loads the extension.
         """
 
-        if config.DEBUG:
-            LOG.setLevel(level=logging.DEBUG)
-        
-        LOG.debug("[Authress] ****************** on_extension_load ******************")
-
     def on_platform_start(self):
         """
         Called when LocalStack starts the main runtime.
         """
-        
-        LOG.debug("[Authress] ****************** on_platform_start ******************")
 
         # volumes = VolumeMappings()
         # if localstack_volume := get_default_volume_dir_mount():
@@ -60,7 +56,7 @@ class AuthressExtension(Extension):
             ),
         )
         self.server = server
-        LOG.info("starting up %s as %s", server.config.image_name, server.config.name)
+        LOG.info("Starting up %s as %s", server.config.image_name, server.config.name)
         server.start()
 
         def _update_proxy_job():
@@ -70,9 +66,9 @@ class AuthressExtension(Extension):
             while True:
                 if self.proxy:
                     if self.server.get_network_ip():
-                        LOG.info("serving Authress API on http://authress.%s:%s",
+                        LOG.info("Authress API Started on: http://authress.%s:%s",
                             constants.LOCALHOST_HOSTNAME,
-                            config.get_edge_port_http(),
+                            config.get_edge_port_http()
                         )
                         self.proxy.proxy.forward_base_url = self.server.url
                         break
@@ -86,8 +82,6 @@ class AuthressExtension(Extension):
         """
         Called when LocalStack is shutting down. Can be used to close any resources (threads, processes, sockets, etc.).
         """
-        
-        LOG.debug("[Authress] ****************** on_platform_shutdown ******************")
 
         if self.server:
             self.server.shutdown()
@@ -118,8 +112,6 @@ class AuthressExtension(Extension):
         Called with the custom request handlers of the LocalStack gateway. Overwrite this to add or update handlers.
         :param handlers: custom request handlers of the gateway
         """
-        
-        LOG.debug("[Authress] ****************** update_request_handlers ******************")
         pass
 
     def update_response_handlers(self, handlers: aws.CompositeResponseHandler):
@@ -127,14 +119,11 @@ class AuthressExtension(Extension):
         Called with the custom response handlers of the LocalStack gateway. Overwrite this to add or update handlers.
         :param handlers: custom response handlers of the gateway
         """
-        
-        LOG.debug("[Authress] ****************** update_response_handlers ******************")
         pass
     
     def on_platform_ready(self):
         """
-        Called when LocalStack is ready and the Ready marker has been LOG.debuged.
+        Called when LocalStack is ready and the Ready marker has been printed.
         """
-        
-        LOG.debug("[Authress] ****************** on_platform_ready ******************")
         pass
+        
