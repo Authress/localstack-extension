@@ -1,15 +1,15 @@
 
 <p align="center">
-  <img src="https://authress.io/static/images/logo-text-200.png" height="100px" alt="Authress logo">
-  <img src="https://github.com/Authress/localstack-extension/assets/5056218/7bad113d-405f-4cd4-9335-3427d6419a13" alt="Partnership" height="80px">
-  <img src="https://github.com/Authress/localstack-extension/assets/5056218/a52d0c26-f6e1-4347-859e-fef2bd10cf89" alt="LocalStack logo">
+  <a href="https://authress.io/knowledge-base/docs/SDKs/authress-local"><img src="https://authress.io/static/images/logo-text-200.png" height="100px" alt="Authress logo"></a>
+  <a href="https://authress.io/knowledge-base/docs/SDKs/authress-local"><img src="https://github.com/Authress/localstack-extension/assets/5056218/7bad113d-405f-4cd4-9335-3427d6419a13" alt="Partnership" height="80px"></a>
+  <a href="https://authress.io/knowledge-base/docs/SDKs/authress-local"><img src="https://github.com/Authress/localstack-extension/assets/5056218/a52d0c26-f6e1-4347-859e-fef2bd10cf89" alt="LocalStack logo"></a>
 
 
 </p>
 
 # LocalStack Extension for Authress Authentication and Authorization
 
-This is the [LocalStack](https://localstack.cloud/) extension that enables running authentication, user identity, permissions, api key management, and access control in your [LocalStack environment](https://localstack.cloud/) via [Authress](https://authress.io).
+This is the [LocalStack](https://localstack.cloud/) extension that enables running authentication, user identity, permissions, api key management, and access control in your [LocalStack environment](<a href="https://authress.io/knowledge-base/docs/SDKs/authress-local">) via [Authress](https://authress.io).
 
 This LocalStack extension generates a copy of the [Authress API](https://authress.io/app/#/api) so that the authentication and access management the Authress API provides can be utilized by running services directly in any environment. You can use this to build authentication and authorization directly into your applications and services. Additionally, this extension can be used locally to develop faster without needing an [Authress Account](https://authress.io).
 
@@ -28,7 +28,7 @@ This LocalStack extension generates a copy of the [Authress API](https://authres
     </a>
 </p>
 
-===============================
+---
 
 ## Installation
 
