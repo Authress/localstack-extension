@@ -26,6 +26,9 @@ This LocalStack extension generates a copy of the [Authress API](https://authres
     <a href="https://authress.io/community" alt="authress community">
       <img src="https://img.shields.io/badge/Community-Authress-fbaf0b.svg">
     </a>
+    <a href="https://app.localstack.cloud/extensions/remote?url=git+https://github.com/Authress/localstack-extension/#egg=localstack-extension-authress" alt="extensions installer">
+      <img src="https://localstack.cloud/gh/extension-badge.svg">
+    </a>
 </p>
 
 ---
