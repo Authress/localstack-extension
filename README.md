@@ -15,20 +15,15 @@ This LocalStack extension generates a copy of the [Authress API](https://authres
 
 <p align="center">
     <a href="https://badge.fury.io/py/localstack-extension-authress" alt="LocalStack Authress Extension">
-        <img src="https://badge.fury.io/py/localstack-extension-authress.svg">
-    </a>
+      <img src="https://badge.fury.io/py/localstack-extension-authress.svg"></a>
     <a href="https://github.com/Authress/localstack-extension/actions/workflows/build.yml" alt="Build status">
-      <img src="https://github.com/Authress/localstack-extension/actions/workflows/build.yml/badge.svg">
-    </a>
+      <img src="https://github.com/Authress/localstack-extension/actions/workflows/build.yml/badge.svg"></a>
     <a href="https://github.com/Authress/localstack-extension/blob/main/LICENSE" alt="Apache-2.0">
-      <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg">
-    </a>
+      <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"></a>
     <a href="https://authress.io/community" alt="authress community">
-      <img src="https://img.shields.io/badge/Community-Authress-fbaf0b.svg">
-    </a>
+      <img src="https://img.shields.io/badge/Community-Authress-fbaf0b.svg"></a>
     <a href="https://app.localstack.cloud/extensions/remote?url=git+https://github.com/Authress/localstack-extension/#egg=localstack-extension-authress" alt="extensions installer">
-      <img src="https://localstack.cloud/gh/extension-badge.svg">
-    </a>
+      <img src="https://localstack.cloud/gh/extension-badge.svg"></a>
 </p>
 
 ---
