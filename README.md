@@ -36,6 +36,14 @@ localstack extensions install localstack-extension-authress
 ```
 
 ## Usage
+1. [Start LocalStack](https://docs.localstack.cloud/getting-started/installation/#starting-localstack-with-docker-compose) if it isn't started already. You can do this by running:
+
+```sh
+ACTIVATE_PRO=1 LOCALSTACK_AUTH_TOKEN="LOCALSTACK_AUTH_TOKEN" EXTENSION_DEV_MODE=1 DEBUG=1 localstack start
+```
+
+If you run into any issues doing that, check out the [Troubleshooting Guide](./troubleshooting.md).
+
 The auth extension runs at `http://authress.localhost.localstack.cloud:4566`.
 
 You can configure API calls to the authorization server by passing this url as the `authressApiUrl` or the `authress_api_url` depending on which SDK you are using.

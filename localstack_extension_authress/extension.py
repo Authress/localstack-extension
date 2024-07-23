@@ -126,4 +126,3 @@ class AuthressExtension(Extension):
         Called when LocalStack is ready and the Ready marker has been printed.
         """
         pass
-        

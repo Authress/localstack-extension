@@ -1,0 +1,7 @@
+# requirements.txt
+#
+# installs dependencies from ./setup.py, and the package itself,
+# in editable mode
+.
+
+setuptools >= 21.0.0

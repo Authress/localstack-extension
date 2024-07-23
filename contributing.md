@@ -32,5 +32,5 @@ ACTIVATE_PRO=1 LOCALSTACK_API_KEY=API_KEY EXTENSION_DEV_MODE=1 DEBUG=1 localstac
 ```
 
 ### For local debugging
-After plugin installation from the pypi, the plugin will be available in:
+After plugin installation from the PyPI, the plugin will be available in:
 `~/.cache/localstack/volume/lib/extensions/python_venv/lib/python3.10/site-packages/localstack_extension_authress`
